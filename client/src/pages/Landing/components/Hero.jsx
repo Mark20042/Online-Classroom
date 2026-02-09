@@ -1,8 +1,10 @@
 import React from "react";
 import heroImage from "@/assets/karton.png";
 import { ArrowRight } from "lucide-react";
+import { useNavigate } from "react-router-dom";
 
 const Hero = () => {
+  const navigate = useNavigate();
   return (
     <section className="w-full px-6 py-12 md:py-0 min-h-[calc(100vh-80px)] flex items-center justify-center overflow-hidden relative">
       <div
@@ -30,6 +32,7 @@ const Hero = () => {
               className="flex items-center justify-center gap-3 px-8 py-4 bg-[#FF5F5F] text-white font-bold text-lg border-2 border-black shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] active:translate-x-0.5 active:translate-y-0.5 active:shadow-none
           transition-all
            cursor-pointer"
+              onClick={() => navigate("/register")}
             >
               JOIN FOR FREE
               <ArrowRight size={22} strokeWidth={3} />

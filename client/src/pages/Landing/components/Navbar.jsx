@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import { BookOpen, User, UserPlus, Menu } from "lucide-react";
 import { NAV_LINKS, MOBILE_LINKS } from "../../../constants";
 
@@ -33,7 +34,8 @@ const Navbar = () => {
         {/* 3. Action Buttons - PRIORITY SWAPPED */}
         <div className="hidden md:flex items-center gap-4">
           {/* LOG IN (Now Primary/Highlighted) */}
-          <button
+          <Link
+            to="/login"
             className="
             flex items-center gap-2 
             font-bold text-sm font-mono tracking-wider
@@ -50,8 +52,9 @@ const Navbar = () => {
             {/* New Catchy User Icon */}
             <User size={18} strokeWidth={2.5} />
             LOG IN
-          </button>
-          <button
+          </Link>
+          <Link
+            to="/register"
             className="
             font-black text-sm font-mono gap-3 tracking-widest whitespace-nowrap text-black  flex
             bg-transparent border-0 shadow-none
@@ -62,7 +65,7 @@ const Navbar = () => {
           >
             <UserPlus size={18} strokeWidth={2.5} />
             SIGN UP
-          </button>
+          </Link>
         </div>
         {/* Mobile Menu Toggle */}
         <button
@@ -82,12 +85,18 @@ const Navbar = () => {
           <hr className="border-black opacity-20 my-2" />
 
           {/* Mobile Buttons */}
-          <button className="w-full py-3 bg-white border-2 border-black font-bold shadow-[3px_3px_0px_0px_rgba(0,0,0,1)] active:translate-x-0.5 active:translate-y-0.5 active:shadow-none transition-all">
+          <Link
+            to="/login"
+            className="w-full text-center py-3 bg-white border-2 border-black font-bold shadow-[3px_3px_0px_0px_rgba(0,0,0,1)] active:translate-x-0.5 active:translate-y-0.5 active:shadow-none transition-all"
+          >
             LOG IN
-          </button>
-          <button className="w-full py-3 bg-[#FF5F5F] text-white border-2 border-black font-bold shadow-[3px_3px_0px_0px_rgba(0,0,0,1)] active:translate-x-0.5 active:translate-y-0.5 active:shadow-none transition-all">
+          </Link>
+          <Link
+            to="/register"
+            className="w-full text-center py-3 bg-[#FF5F5F] text-white border-2 border-black font-bold shadow-[3px_3px_0px_0px_rgba(0,0,0,1)] active:translate-x-0.5 active:translate-y-0.5 active:shadow-none transition-all"
+          >
             CREATE ACCOUNT
-          </button>
+          </Link>
         </div>
       )}
     </nav>
