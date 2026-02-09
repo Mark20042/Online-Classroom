@@ -34,7 +34,7 @@ const HowItWorks = () => {
                    C 800,550 800,550 600,550
                    C 400,550 400,550 200,550"
                 fill="none"
-                stroke="#3B82F6"
+                stroke="#FF5F5F"
                 strokeWidth="4"
                 strokeLinecap="round"
                 strokeDasharray="12 12"
@@ -43,7 +43,7 @@ const HowItWorks = () => {
               <path
                 d="M 210,540 L 190,550 L 210,560"
                 fill="none"
-                stroke="#3B82F6"
+                stroke="#FF5F5F"
                 strokeWidth="4"
                 strokeLinecap="round"
                 strokeDasharray="4 4"
@@ -79,7 +79,7 @@ const HowItWorks = () => {
                   <div className="relative mb-6 w-full max-w-87.5 aspect-4/3 flex items-center justify-center p-4 bg-[#f3e4c3] rounded-3xl z-10">
                     {/* Step Number Badge */}
                     <div
-                      className={`absolute -top-2 -right-2 w-12 h-12 bg-[#3B82F6] text-white border-2 border-black  rounded-full flex items-center justify-center font-black text-xl shadow-[3px_3px_0px_0px_rgba(0,0,0,1)] z-30`}
+                      className={`absolute -top-2 -right-2 w-12 h-12 bg-[#FF5F5F] text-white border-2 border-black  rounded-full flex items-center justify-center font-black text-xl shadow-[3px_3px_0px_0px_rgba(0,0,0,1)] z-30`}
                     >
                       {step.id}
                     </div>
